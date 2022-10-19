@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Scrolling Website | Vannila Javascript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            <li><a href="" class="active">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Work</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="stars.png" id="stars">
+        <img src="moon.png" id="moon">
+        <img src="mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Moon Light</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="mountains_front.png" id="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Parallax Scrolling Effects</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, consequuntur reiciendis vero laborum ratione nisi et quibusdam expedita numquam. Obcaecati eligendi consequatur praesentium voluptate tempore porro quisquam natus earum accusantium veritatis repellat ullam doloremque nisi fugit voluptatibus unde incidunt eum, odit reprehenderit temporibus est voluptatem corporis! Hic impedit fugiat voluptatem sapiente, soluta harum obcaecati amet velit modi sit dolorem voluptatibus, dicta expedita iure autem possimus repudiandae. Nobis dolor ab enim soluta praesentium asperiores obcaecati optio ex. Autem soluta dolores iste voluptas adipisci atque, perspiciatis quia ab nihil. Numquam alias soluta perspiciatis quidem sequi quibusdam tempora. Nemo molestias atque non repudiandae.<br><br>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo magni similique porro saepe ex iste omnis cumque facere impedit atque, perferendis aut dolorum aperiam quibusdam quis blanditiis ad, ullam vel illum odit minus earum! Rem eum vero ratione ut non beatae consequuntur velit maxime. Ducimus dolore voluptates doloremque minus laboriosam accusamus voluptatum eos harum et facilis? Minima quasi minus dignissimos doloribus! Maiores sequi cumque temporibus labore impedit soluta dolore explicabo alias, eos inventore, quam vitae officiis laborum omnis quaerat nobis eligendi cupiditate iusto. Ab facilis corporis beatae? Debitis, aut. Quisquam impedit eius perferendis voluptatibus praesentium fuga quod natus libero magnam<br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores rem, delectus sit explicabo distinctio harum et repudiandae architecto dolore omnis a commodi laborum! Beatae distinctio, rem iste dolores non eius alias atque, officia aperiam quasi aliquam quaerat magnam iure dolorum iusto sunt facilis eum vero. Sunt, accusamus aliquid totam sed consectetur fugiat. Nam animi repudiandae, mollitia id esse exercitationem voluptatem neque ea asperiores quia minima iste cumque dolorum provident fugit eos dignissimos beatae odit ullam deleniti recusandae non. Eos, a, consectetur ab magni, ipsa dolor labore rerum quisquam aliquam facilis necessitatibus eligendi voluptate doloribus molestiae. Consequatur maxime est reiciendis quam.</p>
+    </div>
+    <script>
+        let stars=document.getElementById('stars');
+        let moon=document.getElementById('moon');
+        let mountains_behind=document.getElementById('mountains_behind');
+        let text=document.getElementById('text');
+        let btn=document.getElementById('btn');
+        let mountains_front=document.getElementById('mountains_front');
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll', function(){
+            let value= window.scrollY;
+            stars.style.left= value * 0.25 +'px';
+            moon.style.top= value * 1.05 +'px';
+            mountains_behind.style.top= value * 0.5 +'px';
+            mountains_front.style.top= value * 0 +'px';
+            text.style.marginRight= value * 4 +'px';
+            text.style.marginTop= value * 1.5 +'px';
+            btn.style.marginTop= value * 1.5 +'px';
+            header.style.top = value * 0.5 +'px';
+        })
+        </script>
+</body>
+</html>
